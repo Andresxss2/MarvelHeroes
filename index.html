@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
     <!-- Iconos - fonst awesome-->
-    <script src="https://use.fontawesome.com/2408ce75b6.js"></script>
-    <title>MarverHeroes</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="./style/style.css">
+
+
+    <title>Marvel Heroes</title>
 </head>
 
 <body>
@@ -17,26 +19,63 @@
         <div class="manu_movil">
             <i class="fas fa-bars bars_menu"></i>
         </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"> home</i></a></li>
+                <li><a href="#explore"><i class="fab fa-phoenix-framework">explore</i></a></li>
+                <li><a href="#favorites_heroes"><i class="fas fa-heart"></i>favorites</a></li>
+            </ul>
+        </nav>
         <div class="logo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/1200px-Marvel_Logo.svg.png"
                 alt="img_marvel">
         </div>
-        <nav class="menu">
-            <ul>
+        <div>
+            <i class="fas fa-search search_menu"></i>
+        </div>
 
-                <li><a href="#home"><i class="fas fa-home"></i> favorites_heroes</a></li>
-                <li><a href="#heroes"><i class="fas fa-mask"></i> favorites_heroes</a></li>
-                <!-- IMPORTANTE probar con el icono de fenix para ver que tal se ve estaicamente -->
-                <!-- <li><a href="#heroes"><i class="fab fa-phoenix-framework"></i> favorites_heroes</a></li> -->
-                <li><a href="#favorites_heroes"><i class="fas fa-star"></i> favorites_heroes</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <section></section>
-        <section id="favorites_heroes"></section>
+        <section id="home">
+            <h1> Marvel Heores</h1>
+            <p> On this page you can search all marvel heroes and you can save your favorites, also, you can read about
+                their history and much more. <strong>¡welcome and enjoy!</strong>
+            </p>
+            <img src="https://jaumeperisblanes.files.wordpress.com/2012/10/marvel-universe.jpg" alt="all_heroes">
+        </section>
+        <section id="explore">
+            <h2>explore all heroes and add your favorites</h2>
+            <button class="searh_izq">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="show_heroes">
+                <div class="heroes">
+                    <div class="heroe">
+                        <button class="favorite_heroe">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <img src="" alt="url_api_heroe">
+                    </div>
+                </div>
+            </div>
+            <button class="searh_der">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </section>
+        <section id="favorites_heroes">
+            <h2>these are your favorite heroes enjoy them</h2>
+            <div class="favoties">
+
+            </div>
+        </section>
     </main>
-    <H1>Search yurs Heroes</H1>
+    <footer>
+        <p> if you like to get more information about movies or superhero figures visit the web sites below <i
+                class="far fa-copyright"></i> </p>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-youtube"></i>
+    </footer>
     <script src="./code.js"></script>
 </body>
 
