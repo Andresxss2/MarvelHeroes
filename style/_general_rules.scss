@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "header""main""footer";
+    grid-template-columns: auto;
+    grid-template-rows: 100%;
+    max-width: 1450px;
+}
