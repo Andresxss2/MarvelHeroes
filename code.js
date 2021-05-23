@@ -1,23 +1,23 @@
 "use strict"
 console.log("Hola soy code");
 
-// const hidden_menu = ()=>{
-//     menu_bar("menu","menu_open")
-// }
-// const listen=(elemet_listen,fun_accion)=>{
-//     let bar_menu=document.querySelector(`${elemet_listen}`)
-//     bar_menu.addEventListener('click',fun_accion)
-// }
-// const menu_bar= (id, add_class)=>{
-//     let nav_menu=document.querySelector(`#${id}`)
-//     nav_menu.classList.toggle(`${add_class}`)
-// }
-// listen("menu_movil",hidden_menu)
-    
-// Whit this funtion you can add events to buttons
-const hidden_menu=()=>{
+const bars_menu=()=>{
        console.log('Soy bar menu')
-   }
+       let hidden_menu=document.querySelector('.menu')
+       
+       // Option menu close on cliked
+       
+       let add_exit=document.querySelector('.menu_movil i')
+       if(hidden_menu.classList.toggle('menu_hidden')){
+            add_exit.classList.remove('fa-bars')
+            add_exit.classList.add('fa-times')
+
+        }else{
+            add_exit.classList.remove('fa-times')
+            add_exit.classList.add('fa-bars')
+       }
+}
+
 const btn_izq=()=>{
     console.log("Soy btn_izq")
 
@@ -31,11 +31,20 @@ const bnt_favorite=()=>{
 
 }
 
-const listen= (id_name,funcion_acive)=>{
+const listen_id= (id_name,funcion_acive)=>{
     const hidden_menu= document.querySelector(`#${id_name}`)
     hidden_menu.addEventListener('click',funcion_acive)
 }
-listen("menu_movil",hidden_menu)
-listen("searh_izq",btn_izq)
-listen("searh_der",btn_der)
-listen("favorite_heroe",bnt_favorite)
+
+const listen_class= (class_name,funcion_acive)=>{
+    const hidden_menus= document.querySelectorAll(`.${class_name}`)
+    for (const hidden_menu of hidden_menus) {
+        hidden_menu.addEventListener('click',funcion_acive)
+    }
+}
+
+listen_id("menu_movil",bars_menu)
+listen_id("searh_izq",btn_izq)
+listen_id("searh_der",btn_der)
+listen_id("favorite_heroe",bnt_favorite)
+listen_class("hidden_options",bars_menu)
