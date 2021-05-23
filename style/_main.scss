@@ -1,34 +1,169 @@
 main{
+    z-index: 10;
     grid-area: main;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: 100vw;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    h1 , h2{
-            text-align: center;
-            font-weight: 700;
-            margin: 20px;
+    section{
+        width: 100vw;
+        height: 100vh;
+    }
+    h1{
+        text-align: center;
+        font-weight: 700;
+        font-size: 28px;
+        margin: 20px;
+    }
+    h2{
+        grid-area: Sub_title;
+        padding-top: 55px;
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 25px;
         }
     p{
         text-align: justify;
-        
+        font-size: 18px;
     }
+    .btn{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: center;
+        height: 50px;
+        width: 20px;
+        top: 45%;
+        background-color: rgba($color: #888, $alpha: 0.3);
+        border: none;
+        border-radius: 5px;
+        &:hover{
+            background-color: #000;
+            i{
+                color: white;
+            }
+        }
+    }
+    
     .home{
+        h1{
+            padding-top:10px ;
+        }
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        width: 97vw;
-        height: 70vh;
-        
-        
-        strong{
-            padding-left: 25%;
+        align-content: center;
+        width: 98%;
+
+        p:nth-child(3){
+            width: 100%;
+            text-transform: capitalize;
+            text-align: center;
            
         }
         img{
             margin: 20px 0 0 4px ;
-            width: 98%;
+            width: 97%;
+            height: 40vh;
         }
+    }
+    .explore{
+        
+        display: grid;
+        grid-template-areas: "Sub_title Sub_title Sub_title" 
+                             "conten_fav conten_fav conten_fav";
+        
+        grid-template-columns: 1fr 6fr  1fr ;
+        grid-template-rows: 1fr 5fr;
+        background-color: rgba($color: #000, $alpha: 0.8);
+        
+        h2{
+            color: white;
+        }
+        .content_fav{
+            grid-area: conten_fav;
+
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-content: space-around;
+            height: auto;
+            
+            position: relative;
+            top:0;
+            img{
+                width: 50vh;
+                height: 50vh;
+            }
+            .show_heroe{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+
+                
+                
+                #searh_izq {
+                    position: absolute;
+                    left: 10px;
+                    //border: none;
+                }
+                #favorite_heroe{
+                    position: absolute;
+                    top: 20%;
+                    left: 90%;
+                    width: 25px;
+                    height: 25px;
+                    
+                }
+
+                #searh_der{
+                    position: absolute;
+                    left: 93%;
+                    
+                }
+            }
+        }
+
+    }
+    .favorites_heroes{
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-content: start;
+        height: auto;
+        h2{ 
+            padding: 15px;
+        }
+        .favorite{
+            
+            width: 95%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            .show_heroe_add{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-content: center;
+                width: 300px;
+                height: 300px;
+                background-color: #000;
+                border-radius: 3px;
+                margin: 5px;
+                img{
+                    width: 100%;
+                }
+                button{
+                    margin-top: 10px;
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+
     }
 }

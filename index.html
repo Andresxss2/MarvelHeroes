@@ -31,6 +31,7 @@
                 <li><a class="hidden_options" href="#home"><i class="fas fa-home"></i>home</a></li>
                 <li><a class="hidden_options" href="#explore"><i class="fab fa-phoenix-framework"></i>explore</a></li>
                 <li><a class="hidden_options" href="#favorites_heroes"><i class="fas fa-heart"></i>favorites</a></li>
+                <li><a class="hidden_options" href="#social_media"><i class="fas fa-users"></i>social media</a></li>
             </ul>
         </nav>
 
@@ -38,42 +39,68 @@
     <main>
         <section id="home" class="home">
             <h1> Marvel Heores</h1>
-            <p> On this page you can search all marvel heroes and you can save your favorites, also, you can read about
-                their history and much more. <strong>¡welcome and enjoy!</strong>
+            <p> On this page you can search all marvel heroes, save your favorites, also, you can read about
+                their history and much more.
             </p>
+            <p><strong>¡welcome and enjoy!</strong></p>
             <img src="https://jaumeperisblanes.files.wordpress.com/2012/10/marvel-universe.jpg" alt="all_heroes">
         </section>
+
         <section id="explore" class="explore">
-            <h2>explore all heroes and add your favorites</h2>
-            <button id="searh_izq">
-                <i class="fas fa-arrow-left"></i>
-            </button>
-            <div class="show_heroes">
-                <div class="heroes">
-                    <div class="heroe">
-                        <button id="favorite_heroe">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <img src="" alt="url_api_heroe">
-                    </div>
+            <h2 class="sub_title">explore all heroes and add your favorites</h2>
+            <div class="content_fav">
+                <img src="https://dam.smashmexico.com.mx/wp-content/uploads/2018/11/hulkbio_portada.jpg"
+                    alt="url_api_heroe">
+
+                <div class="show_heroe">
+                    <button id="searh_izq" class="btn">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+
+                    <button id="favorite_heroe" class="btn">
+                        <i class="fas fa-heart"></i>
+                    </button>
+
+                    <button id="searh_der" class="btn">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
+
             </div>
-            <button id="searh_der">
-                <i class="fas fa-arrow-right"></i>
-            </button>
         </section>
+
         <section id="favorites_heroes" class="favorites_heroes">
-            <h2>these are your favorite heroes enjoy them</h2>
-            <div class="favoties">
-                <p>Se deben porder eliminar</p>
+            <h2 class="sub_title">these are your favorite heroes enjoy them</h2>
+            <div class="favorite">
+                <div class="show_heroe_add">
+                    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2019/02/Hulk.jpg?itok=vDMFWrcl"
+                        alt="hulk">
+                    <button id="delet_favorite_heroe" class="btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <!-- con js agregar el codigo de arriba con la info de la appi. -->
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p> if you like to get more information about movies or superhero figures visit the web sites below </p>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-youtube"></i>
+    <footer id="social_media">
+        <p> if you like to get more information about movies or superheros figures visit the web sites below </p>
+        <hr>
+        <div class="social">
+
+            <a href="https://www.marvel.com/" target="blank">
+                <i class="fab fa-medium-m"></i>
+            </a>
+            <a href="https://www.instagram.com/marvel/" target="blank">
+                <i class="fab fa-instagram .fa-1x"></i>
+            </a>
+            <a href="https://www.facebook.com/MarvelLatinoamerica/?brand_redir=6883542487" target="blank">
+                <i class="fab fa-facebook-f .fa-1x"></i>
+            </a>
+            <a href="https://www.youtube.com/user/MARVEL" target="blank">
+                <i class=" fab fa-youtube .fa-1x"></i>
+            </a>
+        </div>
     </footer>
     <script src="./code.js"></script>
 </body>
