@@ -16,7 +16,7 @@
 <body>
     <header>
 
-        <button id="menu_movil" class="menu_movil" onclick="menu_bar()">
+        <button id="menu_movil" class="menu_movil">
             <i class="fas fa-bars fa-1x bars_menu "></i>
         </button>
         <div class="logo">
@@ -26,7 +26,7 @@
         <div class="search_menu">
             <i class="fas fa-search"></i>
         </div>
-        <nav class="menu">
+        <nav id="menu" class="menu">
             <ul>
                 <li><a href="#home"><i class="fas fa-home"></i>home</a></li>
                 <li><a href="#explore"><i class="fab fa-phoenix-framework"></i>explore</a></li>
@@ -45,20 +45,20 @@
         </section>
         <section id="explore" class="explore">
             <h2>explore all heroes and add your favorites</h2>
-            <button class="searh_izq">
+            <button id="searh_izq">
                 <i class="fas fa-arrow-left"></i>
             </button>
             <div class="show_heroes">
                 <div class="heroes">
                     <div class="heroe">
-                        <button class="favorite_heroe">
+                        <button id="favorite_heroe">
                             <i class="fas fa-heart"></i>
                         </button>
                         <img src="" alt="url_api_heroe">
                     </div>
                 </div>
             </div>
-            <button class="searh_der">
+            <button id="searh_der">
                 <i class="fas fa-arrow-right"></i>
             </button>
         </section>

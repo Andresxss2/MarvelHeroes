@@ -24,12 +24,14 @@ header{
             font-size: 25px;
         }
     }
+    
     .menu{
         
         grid-area:_menu;
         width:50%;
         height: 150px;
         background-color: #202020;
+        overflow: hidden;
         ul{
             display: flex;
             flex-flow:row wrap;
@@ -56,6 +58,9 @@ header{
                 }
             }
         }
+    }
+    .menu.menu_bar_opnen{
+        overflow: unset;
     }
     .logo{
         grid-area:_img;
