@@ -57,6 +57,7 @@ main{
         justify-content: center;
         align-items: center;
         width: 98%;
+        height: 100vh;
 
         p:nth-child(3){
             width: 100%;
@@ -154,8 +155,8 @@ main{
                 justify-content: center;
                 align-content: center;
                 width: 300px;
-                height: 300px;
-                background-color: #000;
+                height: auto;
+                
                 border-radius: 3px;
                 margin: 5px;
                 img{
@@ -169,5 +170,34 @@ main{
             }
         }
 
+    }
+    #search_comic{
+
+        background-color: rgba($color: #000, $alpha: 0.8);
+        h2{
+            color: white;
+            padding-top: 25px;
+        }
+        .search{
+            width: 95%;
+            input{
+                height: 50px;
+                width: 100%;
+                font-size:20px ;
+                border-radius: 20px;
+                background:white;
+            }
+        }
+        img{
+            width: 100%;
+        }
+        p{
+            text-align: left;
+            text-transform: capitalize;
+            color: white;
+            padding: 20px 0 20px 30px;
+            font-size: 20px;
+            
+        }
     }
 }
