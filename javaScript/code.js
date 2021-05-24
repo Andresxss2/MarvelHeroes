@@ -94,6 +94,8 @@ const serch_data = results =>{
             </div>
         
         `;    
+
+        
         add_serch.insertAdjacentHTML('afterbegin', comic)
     }   
 
