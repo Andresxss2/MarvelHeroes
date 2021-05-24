@@ -4,7 +4,7 @@ header{
     display: grid;
     grid-template-areas:"_bars _img  _search";
     position: sticky;
-    top:0;
+    top:0px;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1.15fr 0.2fr;
     width: 100vw;
@@ -95,10 +95,28 @@ header{
         }
     }
     .search_menu{
-        color: gray;
-        grid-area:_search;
-        margin: 12.5px 20px;
-        width: 10%;
+        width: 10%; 
+        a{
+            text-decoration: none;
+            grid-area:_search;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            margin: 12.5px 20px;
+            font-weight: 200;
+            i{
+                color: gray;
+                padding: 8px;
+                &:hover{
+                    font-weight: 500;
+                    cursor: pointer;
+                    background-color : #fff;
+                    color: #202020;
+                    border-radius: 50% 50%;
+                }
+            }
+        
+        }
     }
 
 

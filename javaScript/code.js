@@ -4,20 +4,28 @@ const   public_key='fe473f988e6a09d2d31fd7a529f0aaa2',
         private_key='5205fbcb0810b5ef7ac98535856a1d7904c90a71',
         url_characters='http://gateway.marvel.com/v1/public/characters',
         url_comics='http://gateway.marvel.com/v1/public/comics',
-        content_comics=document.querySelector('#content_comics')
+        content_comics=document.querySelector('#content_comics'),
+        searh_comic=document.querySelector('#search')
         
 
 const all_data = results =>{
     const comic_img=`${results.thumbnail.path}/portrait_uncanny.${results.thumbnail.extension}`
     const comic=` 
-    <h3 class="comic_title">${results.title}</h3>
+    <h3 class="comic_title">Title: ${results.title}</h3>
     <img src="${comic_img}" alt=${results.title}>
     <div class="show_comics">
         <button value=${results.id} id="favorite_comic" class="btn">
                             <i class="fas fa-heart"></i>
         </button>
     </div>
+    <h4>about :</h4>
+    <p>${results.description}</p>
+    <h4>list characters in this comic :</h4>
+    <p>${results.characters}</p>
+    <h4>list variantes in this comic :</h4>
+    <p>${results.variants.name}</p>
     `;
+    // console.log(results )
     content_comics.insertAdjacentHTML('afterbegin', comic)
 }
 
@@ -30,13 +38,22 @@ const get_appi_marvel=()=>{
     fetch(url)
     .then(res => res.json())
     .then(comics=> {
+        console.log(comics.data.results.variants)
         comics.data.results.forEach(result => {
             //console.log(result)
             all_data(result)
-        })
-    }).catch(err => console.error(err))
+        })})
+    // .then(variants=>{
+    //     const comit_variants=variants.data.result.variants
+    //     for (const comit_variant of comit_variants) {
+    //         console.log(comit_variant)
+    //     }
+    // })
+    .catch(err => console.error(err))
 }
 get_appi_marvel()
+
+
 const bars_menu=()=>{
        console.log('Soy bar menu')
        let hidden_menu=document.querySelector('.menu')
@@ -73,4 +90,4 @@ const listen_class= (class_name,funcion_acive)=>{
 
 listen_id("menu_movil",bars_menu)
 listen_class("hidden_options",bars_menu)
-listen_id("favorite_comic",bnt_favorite)
+// listen_id("favorite_comic",bnt_favorite)
