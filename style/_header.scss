@@ -1,0 +1,123 @@
+header{
+    z-index: 20;
+    grid-area: header;
+    display: grid;
+    grid-template-areas:"_bars _img  _search";
+    position: sticky;
+    top:0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1.15fr 0.2fr;
+    width: 100vw;
+    height: 50px;
+    background-color: #202020;
+    // overflow: hidden;
+    .menu_movil{
+        grid-area: _bars;
+        background-color: unset;
+        border: none;
+        margin: 12.5px 20px;
+        width: 10%;
+        i{
+            background-color: unset;
+            color:white;
+        }
+        .fa-1x{
+            font-size: 25px;
+        }
+        &:hover{
+            background-color: rgb(46, 44, 44);
+            cursor: pointer;
+        }
+    }
+    
+    nav.menu.menu_hidden{
+        
+        
+        grid-column-start:1;
+        grid-column-end: 4;
+        display: unset;
+        position: relative;
+        left: 0;
+        transition: 1s;
+        background: linear-gradient(to right, #202020, #202020 70%, #fff 70%);
+        margin-top: 2px;
+        width:100%;
+        height: 100%;
+        
+        ul{
+            display: flex;
+            flex-flow:row wrap;
+            list-style: none;
+            width: 100%;
+            li{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                
+
+                a{
+                    width: 100%;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    color: white;
+                    &:hover{
+                        color:black;
+                        background-color: white;
+                    }
+                    i{
+                        padding: 15px 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+    nav.menu{
+        position: relative;
+        top:-50;
+        left: -280px;
+        display: none; // if you like,you can get out this properti and te animation will be forware
+    }
+    .logo{
+        grid-area:_img;
+        width: 80px;
+        height: 70%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        img{
+            margin: 8px 0 0 0;
+            width: 100%;
+            height: 100%;
+
+        }
+    }
+    .search_menu{
+        width: 10%; 
+        a{
+            text-decoration: none;
+            grid-area:_search;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            margin: 12.5px 20px;
+            font-weight: 200;
+            i{
+                color: gray;
+                padding: 8px;
+                &:hover{
+                    font-weight: 500;
+                    cursor: pointer;
+                    background-color : #fff;
+                    color: #202020;
+                    border-radius: 50% 50%;
+                }
+            }
+        
+        }
+    }
+
+
+}

@@ -1,1 +1,541 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "main" "footer";
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  max-width: 1450px;
+}
+
+header {
+  z-index: 20;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "_bars _img  _search";
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: 1fr 1.15fr 0.2fr;
+      grid-template-columns: 1fr 1.15fr 0.2fr;
+  width: 100vw;
+  height: 50px;
+  background-color: #202020;
+}
+
+header .menu_movil {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: _bars;
+  background-color: unset;
+  border: none;
+  margin: 12.5px 20px;
+  width: 10%;
+}
+
+header .menu_movil i {
+  background-color: unset;
+  color: white;
+}
+
+header .menu_movil .fa-1x {
+  font-size: 25px;
+}
+
+header .menu_movil:hover {
+  background-color: #2e2c2c;
+  cursor: pointer;
+}
+
+header nav.menu.menu_hidden {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  display: unset;
+  position: relative;
+  left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background: -webkit-gradient(linear, left top, right top, from(#202020), color-stop(70%, #202020), color-stop(70%, #fff));
+  background: linear-gradient(to right, #202020, #202020 70%, #fff 70%);
+  margin-top: 2px;
+  width: 100%;
+  height: 100%;
+}
+
+header nav.menu.menu_hidden ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  list-style: none;
+  width: 100%;
+}
+
+header nav.menu.menu_hidden ul li {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav.menu.menu_hidden ul li a {
+  width: 100%;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+}
+
+header nav.menu.menu_hidden ul li a:hover {
+  color: black;
+  background-color: white;
+}
+
+header nav.menu.menu_hidden ul li a i {
+  padding: 15px 20px;
+}
+
+header nav.menu {
+  position: relative;
+  top: -50;
+  left: -280px;
+  display: none;
+}
+
+header .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: _img;
+  width: 80px;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .logo img {
+  margin: 8px 0 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+header .search_menu {
+  width: 10%;
+}
+
+header .search_menu a {
+  text-decoration: none;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: _search;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 12.5px 20px;
+  font-weight: 200;
+}
+
+header .search_menu a i {
+  color: gray;
+  padding: 8px;
+}
+
+header .search_menu a i:hover {
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #fff;
+  color: #202020;
+  border-radius: 50% 50%;
+}
+
+main {
+  z-index: 10;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main section {
+  width: 100vw;
+  height: auto;
+}
+
+main h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 20px;
+}
+
+main h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: Sub_title;
+  padding-top: 55px;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 25px;
+  max-width: 550px;
+}
+
+main p {
+  text-align: justify;
+  font-size: 18px;
+  max-width: 550px;
+}
+
+main .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(136, 136, 136, 0.3);
+  border: none;
+  border-radius: 5px;
+}
+
+main .btn:hover {
+  background-color: #000;
+}
+
+main .btn:hover i {
+  color: white;
+}
+
+main .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 98%;
+  height: 100vh;
+}
+
+main .home h1 {
+  padding-top: 25px;
+}
+
+main .home p:nth-child(3) {
+  width: 100%;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+main .home img {
+  margin: 20px 0 10px 4px;
+  width: 97%;
+  height: 35vh;
+  max-width: 550px;
+}
+
+main .explore {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "Sub_title Sub_title Sub_title"  "conten_fav conten_fav conten_fav";
+  -ms-grid-columns: 1fr 6fr  1fr;
+      grid-template-columns: 1fr 6fr  1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+main .explore h2, main .explore h3, main .explore h4 {
+  color: white;
+  text-align: center;
+}
+
+main .explore .content_comics {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: conten_fav;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  height: auto;
+  position: relative;
+  top: 0;
+}
+
+main .explore .content_comics h3, main .explore .content_comics h4 {
+  width: 100%;
+  padding: 10px;
+  text-align: start;
+  text-transform: capitalize;
+}
+
+main .explore .content_comics p {
+  text-align: justify;
+  font-size: 18px;
+  color: white;
+  width: 90%;
+}
+
+main .explore .content_comics img {
+  width: 55vh;
+  height: 55vh;
+}
+
+main .explore .content_comics .show_comics {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main .explore .content_comics .show_comics #favorite_comic {
+  position: relative;
+  top: -50px;
+  left: 35%;
+  width: 100px;
+  height: 30px;
+}
+
+main .favorites_comics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  height: auto;
+}
+
+main .favorites_comics h2 {
+  padding: 15px;
+}
+
+main .favorites_comics .favorite {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+main .favorites_comics .favorite .show_comics_add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 300px;
+  height: auto;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+main .favorites_comics .favorite .show_comics_add img {
+  width: 100%;
+}
+
+main .favorites_comics .favorite .show_comics_add button {
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+main #search_comic {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+main #search_comic h2 {
+  color: white;
+  padding-top: 25px;
+}
+
+main #search_comic .search {
+  width: 95%;
+}
+
+main #search_comic .search input {
+  height: 50px;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 20px;
+  background: white;
+}
+
+main #search_comic img {
+  width: 100%;
+}
+
+main #search_comic p {
+  text-align: left;
+  text-transform: capitalize;
+  color: white;
+  padding: 20px 0 20px 30px;
+  font-size: 20px;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+}
+
+footer p {
+  color: white;
+  width: 100%;
+  padding: 5% 10%;
+  text-align: justify;
+}
+
+footer hr {
+  width: 80%;
+  background-color: white;
+}
+
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 100%;
+  padding: 5% 10%;
+}
+
+footer .social a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+}
+
+footer .social a:hover {
+  font-size: 35px;
+  background-color: none;
+}
+/*# sourceMappingURL=style.css.map */
