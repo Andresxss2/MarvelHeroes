@@ -151,6 +151,7 @@ header .logo img {
 }
 
 header .search_menu {
+  color: gray;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: _search;
@@ -179,7 +180,7 @@ main {
 
 main section {
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 main h1 {
@@ -219,8 +220,7 @@ main .btn {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 50px;
-  width: 20px;
-  top: 45%;
+  width: 50px;
   background-color: rgba(136, 136, 136, 0.3);
   border: none;
   border-radius: 5px;
@@ -251,7 +251,7 @@ main .home {
 }
 
 main .home h1 {
-  padding-top: 10px;
+  padding-top: 25px;
 }
 
 main .home p:nth-child(3) {
@@ -261,9 +261,9 @@ main .home p:nth-child(3) {
 }
 
 main .home img {
-  margin: 20px 0 0 4px;
+  margin: 20px 0 10px 4px;
   width: 97%;
-  height: 40vh;
+  height: 35vh;
 }
 
 main .explore {
@@ -272,16 +272,16 @@ main .explore {
       grid-template-areas: "Sub_title Sub_title Sub_title"  "conten_fav conten_fav conten_fav";
   -ms-grid-columns: 1fr 6fr  1fr;
       grid-template-columns: 1fr 6fr  1fr;
-  -ms-grid-rows: 1fr 5fr;
-      grid-template-rows: 1fr 5fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-main .explore h2 {
+main .explore h2, main .explore h3 {
   color: white;
 }
 
-main .explore .content_fav {
+main .explore .content_comics {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -296,19 +296,27 @@ main .explore .content_fav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   height: auto;
   position: relative;
   top: 0;
 }
 
-main .explore .content_fav img {
-  width: 50vh;
-  height: 50vh;
+main .explore .content_comics h3 {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  text-transform: capitalize;
 }
 
-main .explore .content_fav .show_heroe {
+main .explore .content_comics img {
+  width: 55vh;
+  height: 55vh;
+}
+
+main .explore .content_comics .show_comics {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,30 +327,20 @@ main .explore .content_fav .show_heroe {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-main .explore .content_fav .show_heroe #searh_izq {
-  position: absolute;
-  left: 10px;
+main .explore .content_comics .show_comics #favorite_comic {
+  position: relative;
+  top: -50px;
+  left: 0;
+  width: 100px;
+  height: 30px;
 }
 
-main .explore .content_fav .show_heroe #favorite_heroe {
-  position: absolute;
-  top: 20%;
-  left: 90%;
-  width: 25px;
-  height: 25px;
-}
-
-main .explore .content_fav .show_heroe #searh_der {
-  position: absolute;
-  left: 93%;
-}
-
-main .favorites_heroes {
+main .favorites_comics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,11 +356,11 @@ main .favorites_heroes {
   height: auto;
 }
 
-main .favorites_heroes h2 {
+main .favorites_comics h2 {
   padding: 15px;
 }
 
-main .favorites_heroes .favorite {
+main .favorites_comics .favorite {
   width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,7 +375,7 @@ main .favorites_heroes .favorite {
       align-content: flex-start;
 }
 
-main .favorites_heroes .favorite .show_heroe_add {
+main .favorites_comics .favorite .show_comics_add {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,11 +395,11 @@ main .favorites_heroes .favorite .show_heroe_add {
   margin: 5px;
 }
 
-main .favorites_heroes .favorite .show_heroe_add img {
+main .favorites_comics .favorite .show_comics_add img {
   width: 100%;
 }
 
-main .favorites_heroes .favorite .show_heroe_add button {
+main .favorites_comics .favorite .show_comics_add button {
   margin-top: 10px;
   height: 30px;
   width: 30px;

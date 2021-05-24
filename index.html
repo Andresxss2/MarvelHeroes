@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style/style.css">
 
 
-    <title>Marvel Heroes</title>
+    <title>Marvel comics</title>
 </head>
 
 <body>
@@ -30,7 +30,7 @@
             <ul>
                 <li><a class="hidden_options" href="#home"><i class="fas fa-home"></i>home</a></li>
                 <li><a class="hidden_options" href="#explore"><i class="fab fa-phoenix-framework"></i>explore</a></li>
-                <li><a class="hidden_options" href="#favorites_heroes"><i class="fas fa-heart"></i>favorites</a></li>
+                <li><a class="hidden_options" href="#favorites_comics"><i class="fas fa-heart"></i>favorites</a></li>
                 <li><a class="hidden_options" href="#social_media"><i class="fas fa-users"></i>social media</a></li>
             </ul>
         </nav>
@@ -38,8 +38,8 @@
     </header>
     <main>
         <section id="home" class="home">
-            <h1> Marvel Heores</h1>
-            <p> On this page you can search all marvel heroes, save your favorites, also, you can read about
+            <h1> Marvel Comics</h1>
+            <p> On this page you can search all marvel comics, save your favorites, also, you can read about
                 their history and much more.
             </p>
             <p><strong>¡welcome and enjoy!</strong></p>
@@ -47,35 +47,19 @@
         </section>
 
         <section id="explore" class="explore">
-            <h2 class="sub_title">explore all heroes and add your favorites</h2>
-            <div class="content_fav">
-                <img src="https://dam.smashmexico.com.mx/wp-content/uploads/2018/11/hulkbio_portada.jpg"
-                    alt="url_api_heroe">
-
-                <div class="show_heroe">
-                    <button id="searh_izq" class="btn">
-                        <i class="fas fa-arrow-left"></i>
-                    </button>
-
-                    <button id="favorite_heroe" class="btn">
-                        <i class="fas fa-heart"></i>
-                    </button>
-
-                    <button id="searh_der" class="btn">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
+            <h2 class="sub_title">explore all comics and add your favorites</h2>
+            <div id="content_comics" class="content_comics">
             </div>
         </section>
 
-        <section id="favorites_heroes" class="favorites_heroes">
-            <h2 class="sub_title">these are your favorite heroes enjoy them</h2>
+        <section id="favorites_comics" class="favorites_comics">
+            <h2 class="sub_title">these are your favorite comics enjoy them</h2>
             <div class="favorite">
-                <div class="show_heroe_add">
+                <div class="show_comics_add">
+                    <h3 class="comic_title"></h3>
                     <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/480/public/media/image/2019/02/Hulk.jpg?itok=vDMFWrcl"
                         alt="hulk">
-                    <button id="delet_favorite_heroe" class="btn">
+                    <button id="delet_favorite_comics" class="btn">
                         <i class="fas fa-times"></i>
                     </button>
                     <!-- con js agregar el codigo de arriba con la info de la appi. -->
@@ -84,7 +68,7 @@
         </section>
     </main>
     <footer id="social_media">
-        <p> if you like to get more information about movies or superheros figures visit the web sites below </p>
+        <p> if you like to get more information about movies or comics visit the web sites below </p>
         <hr>
         <div class="social">
 
@@ -102,7 +86,8 @@
             </a>
         </div>
     </footer>
-    <script src="./code.js"></script>
+    <script src="./javaScript/md5.js"></script>
+    <script src="./javaScript/code.js"></script>
 </body>
 
 </html>
