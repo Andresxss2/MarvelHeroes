@@ -34,9 +34,12 @@ const _fech_app_process=(url, funtion_action)=>{
     fetch(url)
     .then(res => res.json())
     .then(comics=> {
-        
+        if(comics.data.count===0){
+            return funtion_action("lost_data")
+        }
         comics.data.results.forEach(result => {
             funtion_action(result)
+            
         })})
         .catch(err => console.error(err))
 }
